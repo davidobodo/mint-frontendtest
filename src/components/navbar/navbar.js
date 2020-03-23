@@ -11,6 +11,7 @@ const NavbarContainer = styled.div`
     padding-right: ${props => props.theme.rightPadding};
     border-bottom: 1px solid black;
     height: 50px;
+    background-color: #ffffff;
 
     .left-column{
         display: flex;

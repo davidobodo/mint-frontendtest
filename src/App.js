@@ -5,6 +5,7 @@ import { GlobalStyles } from "./styling/GlobalStyles";
 import { theme } from './styling/theme'
 
 import Navbar from './components/navbar/navbar';
+import Sidebar from './components/sidebar/sidebar';
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       <GlobalStyles />
       <div>
         <Navbar />
-        Hello
+        <Sidebar />
       </div>
     </ThemeProvider >
   );
