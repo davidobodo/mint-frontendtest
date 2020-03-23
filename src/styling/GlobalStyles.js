@@ -21,6 +21,7 @@ export const GlobalStyles = createGlobalStyle`
   h1{
     font-size: 24px;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
   }
 
   h2{
@@ -34,18 +35,18 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h4{
-      font-size: 16px;
-      font-weight: bold;
+      font-size: 14px;
+      font-weight: 300;
   }
 
   h5{
-      font-size: 13px;
-      font-weight: bold;
+      font-size: 11px;
+      font-weight: 300;
   }
 
   h6{
-      font-size: 11px;
-      font-weight: bold;
+      font-size: 10px;
+      font-weight: 300;
   }
 
   p{
