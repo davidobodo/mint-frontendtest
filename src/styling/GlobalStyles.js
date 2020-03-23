@@ -26,17 +26,17 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h2{
-      font-size: 30px;
-      font-weight: bold;
+      font-size: 18px;
+      font-weight: 300;
   }
 
   h3{
-      font-size: 24px;
-      font-weight: bold;
+      font-size: 14px;
+      font-weight: 300;
   }
 
   h4{
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 300;
   }
 

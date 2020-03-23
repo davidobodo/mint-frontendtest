@@ -116,7 +116,7 @@ const Navbar = () => {
                 <li className='user'>
                     <div className='user__name'>
                         <h6>Hello</h6>
-                        <h4>Oluwaleke Ojo</h4>
+                        <h3>Oluwaleke Ojo</h3>
                     </div>
                     <div className='user__picture'>
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="img" />

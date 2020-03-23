@@ -6,6 +6,7 @@ import { theme } from './styling/theme'
 
 import Navbar from './components/navbar/navbar';
 import Sidebar from './components/sidebar/sidebar';
+import Body from './components/body/body';
 
 const App = () => {
   return (
@@ -13,7 +14,10 @@ const App = () => {
       <GlobalStyles />
       <div>
         <Navbar />
-        <Sidebar />
+        <div style={{ display: 'flex' }}>
+          <Sidebar />
+          <Body />
+        </div>
       </div>
     </ThemeProvider >
   );
