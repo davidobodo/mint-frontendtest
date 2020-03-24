@@ -14,14 +14,10 @@ import recOrder from '../../assets/img/orders/rec.svg';
 
 import profile from '../../assets/img/profile.svg';
 
+import { SidebarContainer } from './sidebarStyles';
+
 
 const sidebarLinks = [
-    {
-        title: 'Main',
-        links: [
-            { title: 'overview', icon: overview }
-        ]
-    },
     {
         title: 'Payments',
         links: [
@@ -47,54 +43,17 @@ const sidebarLinks = [
 
 
 
-const SidebarContainer = styled.div`
-    color: #647787;
-    padding-left: ${props => props.theme.leftPadding};
-    padding-top: 33px;
-    background-color: #ffffff;
-    width: 260px;
-    min-height: 100vh;
-    border-right: 1px solid black;
-
-    .btn-invoice{
-        text-transform: uppercase;
-        color: #ffffff;
-        background-color: #27AE60;
-        border-radius: 30px;
-        font-size: 12px;
-        padding: 10px 30px;
-        border: none;
-        margin-bottom: 32px;
-    }
-
-    section{
-        margin-bottom: 32px;
-
-        h5{
-            margin-bottom: 15px;
-        }
-
-        li{
-            display: flex;
-            align-items:center;
-            font-size: 11px;
-            font-weight: 300;
-            list-style: none;
-            margin-bottom: 15px;
-
-            img{
-                width: 19px;
-                margin-right: 15px;
-            }
-        }
-    }
-
-`;
 
 const Sidebar = () => {
     return (
         <SidebarContainer>
             <button className="btn-invoice">Generate Invoice</button>
+            <section >
+                <h5>Main</h5>
+                <ul>
+                    <li className='active-link'><img src={overview} alt={overview} />Overview</li>
+                </ul>
+            </section>
             {sidebarLinks.map(category => {
                 const { title, links } = category;
                 return (

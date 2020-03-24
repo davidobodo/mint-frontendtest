@@ -9,9 +9,10 @@ const NavbarContainer = styled.div`
     align-items: center;
     padding-left: ${props => props.theme.leftPadding};
     padding-right: ${props => props.theme.rightPadding};
-    border-bottom: 1px solid black;
     height: 50px;
     background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(79, 79, 79, 0.07);
+    position: relative;
 
     .left-column{
         display: flex;

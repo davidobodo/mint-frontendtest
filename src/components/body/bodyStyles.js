@@ -10,7 +10,7 @@ export const BodyContainer = styled.div`
     .transaction-summary{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 35px;
+        grid-gap: 10px;
         margin-bottom: 50px;
 
         .transaction{
@@ -18,10 +18,10 @@ export const BodyContainer = styled.div`
             border: 1px solid #EEF8FD;
             border-radius: 2px;
             display: flex;
+            justify-content: space-between;
             padding: 20px;
 
             &__details{
-                margin-right: 20px;
 
                 h4{
                     color: #787C90;
