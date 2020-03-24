@@ -5,6 +5,7 @@ import smallChart from '../../assets/img/smallChart.svg';
 import { BodyContainer } from './bodyStyles';
 
 import Payments from '../payments/payments';
+import Pagination from '../pagination/pagination';
 
 const transactions = [
     {
@@ -64,6 +65,7 @@ const Body = () => {
             </section>
 
             <Payments />
+            <Pagination />
 
         </BodyContainer>
     )

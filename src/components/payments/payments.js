@@ -5,6 +5,8 @@ import search from '../../assets/img/search.svg';
 import { allPayments } from './constants';
 
 const PaymentsContainer = styled.div`
+    margin-bottom: 50px;
+    
     h1{
         font-size: 36px;
         font-weight: 400;
