@@ -37,8 +37,15 @@ const Payments = () => {
                             <td>{price}</td>
                             <td>{transNo}</td>
                             <td>{time}</td>
-                            <td>{status}</td>
-                            <td></td>
+                            <td>
+                                <div className='status'>
+                                    <span className='bullet-point'></span>
+                                    {status}
+                                </div>
+                            </td>
+                            <td>
+                                <span className='dropdown'></span>
+                            </td>
                         </tr>
                         <tr className='border-bottom'>
                             <td></td>

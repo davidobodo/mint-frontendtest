@@ -116,6 +116,46 @@ export const PaymentsContainer = styled.div`
                 font-size: 12px;
                 margin-right: 26px;
             }
+
+            .status{
+                display: inline-block;
+                border: 1px solid #CCCFD4;
+                border-radius: 20px;
+                width: 135px;
+                padding: 10px 15px;
+                font-size: 12px;
+
+                .bullet-point{
+                    width: 9px;
+                    height: 9px;
+                    background-color: blue;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+            }
+
+            .dropdown{
+                border: 1px solid #27AE60;
+                width: 27px;
+                height: 27px;
+                background-color: transparent;
+                display: inline-block;
+                position: relative;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    border-left: 2px solid ;
+                    border-bottom: 2px solid;
+                    width: 8px;
+                    height: 8px;
+                    transform: rotate(-45deg);
+                    top: 7px;
+                    left: 8px;
+                    opacity: 0.8;
+                }
+            }
         }
 
         .border-bottom{
@@ -123,6 +163,10 @@ export const PaymentsContainer = styled.div`
 
             td{
                 background-color: #CCCFD4;
+            }
+
+            &:last-child{
+                display: none;
             }
         }
     }

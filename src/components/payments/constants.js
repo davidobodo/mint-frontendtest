@@ -11,7 +11,7 @@ export const allPayments = [
         price: '$73203',
         transNo: 1234567890,
         time: '12:30',
-        status: 'pending',
+        status: 'Reconciled',
     },
     {
         itemType: 'Apple Mac Book 15, 250 12gb',
@@ -25,7 +25,7 @@ export const allPayments = [
         price: '$73203',
         transNo: 1234567890,
         time: '12:30',
-        status: 'pending',
+        status: 'Un-reconciled',
     },
     {
         itemType: 'Apple Mac Book 15, 250 12gb',
@@ -39,7 +39,7 @@ export const allPayments = [
         price: '$73203',
         transNo: 1234567890,
         time: '12:30',
-        status: 'pending',
+        status: 'un-reconciled',
     },
     {
         itemType: 'Apple Mac Book 15, 250 12gb',
@@ -53,7 +53,7 @@ export const allPayments = [
         price: '$73203',
         transNo: 1234567890,
         time: '12:30',
-        status: 'pending',
+        status: 'reconciled',
     },
     {
         itemType: 'Apple Mac Book 15, 250 12gb',
@@ -67,6 +67,6 @@ export const allPayments = [
         price: '$73203',
         transNo: 1234567890,
         time: '12:30',
-        status: 'pending',
+        status: 'Un-reconciled',
     },
 ]
