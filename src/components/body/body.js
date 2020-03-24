@@ -4,6 +4,8 @@ import smallChart from '../../assets/img/smallChart.svg';
 
 import { BodyContainer } from './bodyStyles';
 
+import Payments from '../payments/payments';
+
 const transactions = [
     {
         title: 'Daily Transaction Volume',
@@ -61,6 +63,7 @@ const Body = () => {
                 </div>
             </section>
 
+            <Payments />
 
         </BodyContainer>
     )

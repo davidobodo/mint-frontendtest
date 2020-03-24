@@ -40,6 +40,7 @@ export const BodyContainer = styled.div`
         display: grid;
         grid-template-columns: 70% 30%;
         grid-gap: 5px;
+        margin-bottom: 50px;
         
 
         &__graph{
