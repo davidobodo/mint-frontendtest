@@ -62,7 +62,7 @@ const Payments = () => {
                             <td>{transNo}</td>
                             <td>{time}</td>
                             <td>
-                                <div className='status'>
+                                <div className={`${status} status`}>
                                     <span className='bullet-point'></span>
                                     {status}
                                 </div>

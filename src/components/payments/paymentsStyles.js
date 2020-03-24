@@ -13,6 +13,7 @@ export const PaymentsContainer = styled.div`
     .payments-nav{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 15px;
 
         h3{
@@ -152,6 +153,10 @@ export const PaymentsContainer = styled.div`
                     color: #414042;
                     padding-left: 26px;
                 }
+
+                &:nth-child(5){
+                    width: 17%;
+                }
             }
 
             .acronym{
@@ -178,11 +183,37 @@ export const PaymentsContainer = styled.div`
                 .bullet-point{
                     width: 9px;
                     height: 9px;
-                    background-color: blue;
                     border-radius: 50%;
                     display: inline-block;
                     margin-right: 10px;
                 }
+            }
+
+            .Pending{
+                color: #EBC315;
+
+                .bullet-point{
+                    background-color: #EBC315;
+                }
+
+            }
+
+            .Reconciled{
+                color: #27AE60;
+
+                .bullet-point{
+                    background-color: #27AE60;
+                }
+
+            }
+
+            .Un-reconciled{
+                color: #7F8FA4;
+
+                .bullet-point{
+                    background-color: #7F8FA4;
+                }
+
             }
 
             .dropdown{
