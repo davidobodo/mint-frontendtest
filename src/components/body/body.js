@@ -7,6 +7,8 @@ import { BodyContainer } from './bodyStyles';
 import Payments from '../payments/payments';
 import Pagination from '../pagination/pagination';
 
+import gradient from '../../assets/img/gradient.svg';
+
 const transactions = [
     {
         title: 'Daily Transaction Volume',
@@ -69,8 +71,27 @@ const Body = () => {
                 <div className='todays-transaction__graph'>
                     <div className='header'>
                         <h2>Today: 5, Aug 2018</h2>
-                        <div>1 Jan - 1 Jun</div>
-                        <div>arrow section</div>
+                        <div className='date-range'>1 Jan - 1 Jun</div>
+                        <div className='directions'>
+                            <div className='directions__wrapper'>
+                                <span className='left-direction'></span>
+                            </div>
+                            <div className='directions__wrapper'>
+                                <span className='right-direction'></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style={{ flex: '1' }}>
+                        <div className='month-wrapper'>
+                            <div className='month'>Jan</div>
+                            <div className='month'>Feb</div>
+                            <div className='month'>Mar</div>
+                            <div className='month'>Apr</div>
+                            <div className='month'>May</div>
+                            <div className='month'>Jun</div>
+                        </div>
+                        <img className='gradient-img' src={gradient} alt={gradient} />
                     </div>
                 </div>
                 <div className='todays-transaction__details'>
