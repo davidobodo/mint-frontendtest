@@ -30,6 +30,21 @@ const transactions = [
     }
 ]
 
+const ordersAndPayments = [
+    {
+        title: 'Orders',
+        first: ['Pending Orders', 20],
+        second: ['Reconciled Orders', 80],
+        third: ['Total Orders', 100],
+    },
+    {
+        title: 'Payments',
+        first: ['Un - reconciled Payments', 20],
+        second: ['Reconciled Payments', 80],
+        third: ['Total Payments', 100],
+    }
+]
+
 const Body = () => {
     return (
         <BodyContainer>
@@ -59,8 +74,18 @@ const Body = () => {
                     </div>
                 </div>
                 <div className='todays-transaction__details'>
-                    <div className='top'>Hello</div>
-                    <div className='bottom'>World</div>
+                    {ordersAndPayments.map(section => {
+                        const { title, first, second, third } = section;
+                        return (
+                            <div className='top'>
+                                <h3 className='title'>{title}</h3>
+                                <div className='progress-bar'></div>
+                                <h3>{first[0]}: <span className='yellow'>{first[1]}</span></h3>
+                                <h3>{second[0]}: <span className='green'>{second[1]}</span></h3>
+                                <h3>{third[0]}: <span className='blue'>{third[1]}</span></h3>
+                            </div>
+                        )
+                    })}
                 </div>
             </section>
 

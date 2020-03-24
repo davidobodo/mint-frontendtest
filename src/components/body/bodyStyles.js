@@ -58,12 +58,44 @@ export const BodyContainer = styled.div`
             
             display: grid;
             grid-gap: 5px;
+            grid-auto-rows: 1fr;
 
             .top{
                 background: #FFFFFF;
                 border: 1px solid #EEF8FD;
                 border-radius: 2px;
                 padding: 26px;
+
+                .progress-bar{
+                    width: 100%;
+                    height: 4px;
+                    background-color: green;
+                    margin-bottom: 12px;
+                    border-radius: 10px;
+                }
+
+                .title{
+                    font-weight: 700;
+                }
+
+                h3{
+                    margin-bottom: 12px;
+
+                    .yellow{
+                        color: #ebc315;
+                        font-weight: 700;
+                    }
+                    
+                    .green{
+                        color: #27ae60;
+                        font-weight: 700;
+                    }
+                    
+                    .blue{
+                        color: #1860ec;
+                        font-weight: 700;
+                    }
+                }
 
             }
 
