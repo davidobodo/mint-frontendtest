@@ -66,6 +66,56 @@ export const PaymentsContainer = styled.div`
 
         .options-section{
             padding-left: 80px;
+
+            &__dropdown{
+                position: relative;
+                display: inline-block;
+                border: 1px solid #CED0DA;
+                border-radius: 2px;
+                padding: 10px;
+                width: 150px;
+                margin-left: 16px;
+                cursor: pointer;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    border-left: 2px solid #1875F0;
+                    border-bottom: 2px solid #1875F0;
+                    width: 8px;
+                    height: 8px;
+                    transform: rotate(-45deg);
+                    top: 11px;
+                    right: 12px;
+                    opacity: 0.8;
+                }
+
+                &__options{
+                    ${({ showDropdown }) => showDropdown && 'display: block'};
+                    ${({ showDropdown }) => !showDropdown && 'display: none'};
+                    position: absolute;
+                    list-style: none;
+                    width: 150px;
+                    left: 0;
+                    top: 35px;
+                    border-radius: 0px 0px 6px 6px;
+                    box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.2);
+
+                    li{
+                        padding: 10px;
+                        background-color: #ffffff;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: #F4F4F4;
+                        }
+
+                        &:last-child{
+                            border-radius: 0px 0px 6px 6px;
+                        }
+                    }
+                }
+            }
         }
     }
 

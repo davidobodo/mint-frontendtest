@@ -145,25 +145,31 @@ export const BodyContainer = styled.div`
                 }
             }
 
-            .month-wrapper{
-                display: flex;
-                height: 86%;
+            .header + div{
+                flex: 1;
 
-                .month{
-                    flex: 1;
+                .month-wrapper{
                     display: flex;
-                    justify-content: center;
-                    border-right: 1px solid #CFE8FB;
-
-                    &:last-child{
-                        border-right: none;
+                    height: 86%;
+    
+                    .month{
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        border-right: 1px solid #CFE8FB;
+                        font-weight: 600;
+    
+                        &:last-child{
+                            border-right: none;
+                        }
                     }
                 }
-            }
+    
+                .gradient-img{
+                    position: absolute;
+                    bottom: 0;
+                }
 
-            .gradient-img{
-                position: absolute;
-                bottom: 0;
             }
         }
 

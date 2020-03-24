@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import search from '../../assets/img/search.svg';
 
 import { allPayments } from './constants';
 import { PaymentsContainer } from './paymentsStyles';
 
 const Payments = () => {
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [currentOption, setCurrentOption] = useState('All')
+
+    const handleShowDropdown = () => {
+        setShowDropdown(!showDropdown);
+    }
+
+    const handleSelectOption = (e) => {
+        setCurrentOption(e.target.innerHTML)
+    }
+
     return (
-        <PaymentsContainer>
+        <PaymentsContainer showDropdown={showDropdown}>
             <h1>Payments</h1>
             <div className='payments-nav'>
                 <h3>
@@ -18,7 +29,20 @@ const Payments = () => {
                     <img src={search} alt='search' />
                     <input type='text' placeholder='Search payments' />
                 </div>
-                <h3 className='options-section'>Show</h3>
+                <h3 className='options-section'>
+                    Show
+                    <div className='options-section__dropdown' onClick={handleShowDropdown}>
+                        {currentOption}
+                        <ul className='options-section__dropdown__options' onClick={handleSelectOption}>
+                            <li>All</li>
+                            <li>Reconciled</li>
+                            <li>Un-reconciled</li>
+                            <li>Settled</li>
+                            <li>Unsettled</li>
+                        </ul>
+                    </div>
+
+                </h3>
             </div>
             <table>
                 <tr className='table-heading'>

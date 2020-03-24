@@ -82,7 +82,7 @@ const Body = () => {
                         </div>
                     </div>
 
-                    <div style={{ flex: '1' }}>
+                    <div>
                         <div className='month-wrapper'>
                             <div className='month'>Jan</div>
                             <div className='month'>Feb</div>
