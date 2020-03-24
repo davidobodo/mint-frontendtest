@@ -48,6 +48,14 @@ const ordersAndPayments = [
 ]
 
 const Body = () => {
+
+    const renderProgressBar = (progress) => {
+        const done = Math.floor(progress / 20);
+        [1, 2, 3, 4, 5].map(i => {
+            return done >= i ? <span className='green'></span> : <span className='yellow'></span>
+        })
+    }
+
     return (
         <BodyContainer>
             <section className='transaction-summary'>
@@ -100,7 +108,11 @@ const Body = () => {
                         return (
                             <div className='top'>
                                 <h3 className='title'>{title}</h3>
-                                <div className='progress-bar'></div>
+                                <div className='progress-bar'>
+                                    {[1, 2, 3, 4, 5].map(i => {
+                                        return Math.floor(second[1] / 20) >= i ? <span className='green'></span> : <span className='yellow'></span>
+                                    })}
+                                </div>
                                 <h3>{first[0]}: <span className='yellow'>{first[1]}</span></h3>
                                 <h3>{second[0]}: <span className='green'>{second[1]}</span></h3>
                                 <h3>{third[0]}: <span className='blue'>{third[1]}</span></h3>

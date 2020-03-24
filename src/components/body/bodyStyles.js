@@ -188,9 +188,22 @@ export const BodyContainer = styled.div`
                 .progress-bar{
                     width: 100%;
                     height: 4px;
-                    background-color: green;
                     margin-bottom: 12px;
                     border-radius: 10px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+                    span{
+                        height: 4px;
+                    }
+
+                    .green{
+                        background-color: #27AE60;
+                    }
+
+                    .yellow{
+                        background-color: #FDC203;
+                    }
                 }
 
                 .title{
