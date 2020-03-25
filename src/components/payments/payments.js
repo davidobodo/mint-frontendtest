@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import search from '../../assets/img/search.svg';
 
 import { allPayments } from './constants';
@@ -45,41 +45,48 @@ const Payments = () => {
                 </h3>
             </div>
             <table>
-                <tr className='table-heading'>
-                    <th>Item Type</th>
-                    <th>Price</th>
-                    <th>Transaction No</th>
-                    <th>Time</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                {allPayments.map(payment => {
+                <thead className='table-heading'>
+                    <tr>
+                        <td>Item Type</td>
+                        <td>Price</td>
+                        <td>Transaction No</td>
+                        <td>Time</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </thead>
+                {allPayments.map((payment, i) => {
                     const { itemType, price, transNo, time, status } = payment;
-                    return (<>
-                        <tr className='table-row'>
-                            <td><span className='acronym'>VW</span>{itemType}</td>
-                            <td>{price}</td>
-                            <td>{transNo}</td>
-                            <td>{time}</td>
-                            <td>
-                                <div className={`${status} status`}>
-                                    <span className='bullet-point'></span>
-                                    {status}
-                                </div>
-                            </td>
-                            <td>
-                                <span className='dropdown'></span>
-                            </td>
-                        </tr>
-                        <tr className='border-bottom'>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </>
+                    return (
+                        <Fragment key={i}>
+                            <tbody className='table-row'>
+                                <tr>
+                                    <td><span className='acronym'>VW</span>{itemType}</td>
+                                    <td>{price}</td>
+                                    <td>{transNo}</td>
+                                    <td>{time}</td>
+                                    <td>
+                                        <div className={`${status} status`}>
+                                            <span className='bullet-point'></span>
+                                            {status}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span className='dropdown'></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody className='border-bottom'>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </Fragment>
                     )
                 })}
             </table>

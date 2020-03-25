@@ -128,7 +128,7 @@ export const PaymentsContainer = styled.div`
             background-color: #EAEEF0;
             color: #7F8FA4;
 
-            th{
+            td{
                 font-size: 14px;
                 font-weight: 300;
                 text-align: left;

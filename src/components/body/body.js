@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import smallChart from '../../assets/img/smallChart.svg';
 
 import { BodyContainer } from './bodyStyles';
@@ -49,13 +48,6 @@ const ordersAndPayments = [
 
 const Body = () => {
 
-    const renderProgressBar = (progress) => {
-        const done = Math.floor(progress / 20);
-        [1, 2, 3, 4, 5].map(i => {
-            return done >= i ? <span className='green'></span> : <span className='yellow'></span>
-        })
-    }
-
     return (
         <BodyContainer>
             <section className='transaction-summary'>
@@ -103,14 +95,14 @@ const Body = () => {
                     </div>
                 </div>
                 <div className='todays-transaction__details'>
-                    {ordersAndPayments.map(section => {
+                    {ordersAndPayments.map((section, i) => {
                         const { title, first, second, third } = section;
                         return (
-                            <div className='top'>
+                            <div className='top' key={i}>
                                 <h3 className='title'>{title}</h3>
                                 <div className='progress-bar'>
                                     {[1, 2, 3, 4, 5].map(i => {
-                                        return Math.floor(second[1] / 20) >= i ? <span className='green'></span> : <span className='yellow'></span>
+                                        return Math.floor(second[1] / 20) >= i ? <span className='green' key={i}></span> : <span className='yellow' key={i}></span>
                                     })}
                                 </div>
                                 <h3>{first[0]}: <span className='yellow'>{first[1]}</span></h3>

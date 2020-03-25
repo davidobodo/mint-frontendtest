@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import overview from '../../assets/img/overview.svg';
 
