@@ -240,10 +240,10 @@ export const PaymentsContainer = styled.div`
         }
 
         .border-bottom{
-            height: 1px;
-
+            
             td{
                 background-color: #CCCFD4;
+                height: 1px;
             }
 
             &:last-child{
