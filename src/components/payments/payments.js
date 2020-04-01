@@ -13,7 +13,7 @@ const Payments = () => {
     }
 
     const handleSelectOption = (e) => {
-        setCurrentOption(e.target.innerHTML)
+        setCurrentOption(e.target.id)
     }
 
     return (
@@ -34,11 +34,11 @@ const Payments = () => {
                     <div className='options-section__dropdown' onClick={handleShowDropdown}>
                         {currentOption}
                         <ul className='options-section__dropdown__options' onClick={handleSelectOption}>
-                            <li>All</li>
-                            <li>Reconciled</li>
-                            <li>Un-reconciled</li>
-                            <li>Settled</li>
-                            <li>Unsettled</li>
+                            <li id='All'>All</li>
+                            <li id='Reconciled'>Reconciled</li>
+                            <li id='Un-reconciled'>Un-reconciled</li>
+                            <li id='Settled'>Settled</li>
+                            <li id='Unsettled'>Unsettled</li>
                         </ul>
                     </div>
 
