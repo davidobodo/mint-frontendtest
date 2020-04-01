@@ -96,7 +96,7 @@ export const PaymentsContainer = styled.div`
                     ${({ showDropdown }) => !showDropdown && 'display: none'};
                     position: absolute;
                     list-style: none;
-                    width: 150px;
+                    width: 148px;
                     left: 0;
                     top: 35px;
                     border-radius: 0px 0px 6px 6px;
